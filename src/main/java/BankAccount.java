@@ -1,4 +1,3 @@
-import java.rmi.registry.LocateRegistry;
 import java.time.LocalDate;
 
 public class BankAccount {
@@ -20,7 +19,7 @@ public class BankAccount {
     }
 
 
-
+// getters and setters
     public String getFirstName() {
         return firstName;
     }
@@ -60,12 +59,16 @@ public class BankAccount {
 
     // deposit & withdraw
 
-    public void addDeposit(double amount){
-        this.balance+=amount;
+    public Double addDeposit(double amount){
+        return this.balance+=amount;
     }
 
     public void withdrawMoney(double amount){
         this.balance-=amount;
+    }
+
+    public void payInterest(double interestRate){
+            balance+=balance*interestRate;
     }
 
 }

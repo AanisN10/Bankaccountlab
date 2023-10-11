@@ -7,11 +7,12 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BankAccountTest {
 
-    BankAccount currentAccount;
 
-    @BeforeEach
-    public void setup() {
-        currentAccount = new BankAccount(
+
+    BankAccount currentAccount = new BankAccount();
+
+    void setup() {
+        var currentAccount = new BankAccount(
                 currentAccount.getFirstName(),
                 currentAccount.getLastName(),
                 currentAccount.getDateOfBirth(),
@@ -19,21 +20,20 @@ public class BankAccountTest {
         );
     }
 
-    @BeforeEach
 
-    void setup(){
+    @Test
 
-        deposit = new BankAccountTest();
+    void test1() {
+        assertThat(1.00).isEqualTo(1.00);
 
     }
 
+    void addDeposit() {
 
+//        then
+        double result = currentAccount.getBalance();
 
-
-    @Test
-    void whenDeposit() {
-
-        double result = deposit.getBalance();
+//        when
 
         double expected = 100.00;
 
@@ -41,10 +41,7 @@ public class BankAccountTest {
 
     }
 
-    void test1() {
-        assertThat(1.00).isEqualTo(1.00);
 
-    }
 
 
 }

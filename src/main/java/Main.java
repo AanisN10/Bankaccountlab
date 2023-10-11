@@ -26,8 +26,9 @@ public class Main {
 
         //when you withdraw
 
-        currentAccount.withdrawMoney(1111);
-        System.out.println("This is your current balance in your account after you have widthdrawn : £" + currentBalance);
+        currentAccount.withdrawMoney(200);
+        double newbalance= currentAccount.getBalance();
+        System.out.println("This is your current balance in your account after you have widthdrawn : £" + newbalance);
 
 
     }

@@ -61,11 +61,11 @@ public class BankAccount {
     // deposit & withdraw
 
     public void addDeposit(double amount){
-        balance+=amount;
+        this.balance+=amount;
     }
 
     public void withdrawMoney(double amount){
-        balance-=amount;
+        this.balance-=amount;
     }
 
 }
